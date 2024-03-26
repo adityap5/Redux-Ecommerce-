@@ -34,22 +34,22 @@ function Header() {
             to="about" className="text-xl p-3 cursor-pointer">About us</NavLink>
         </div>
         <div className="flex place-content-between items-center gap-6">
-          <div className="font-bold  border-2 border-[#ffecd1] w-20 p-2 rounded-lg ">
-            <NavLink style={({ isActive }) => {
+        <NavLink style={({ isActive }) => {
               return { color: isActive ? "#483c32" : "#ffecd1" }
             }}
-              to="cart" >Cart</NavLink>
+              to="cart" >
+          <div className="font-bold  border-2 border-[#ffecd1] w-20 p-2 rounded-lg ">
+            Cart
             <div className="absolute right-[113px] top-1 w-5 h-6 rounded-full border-[1px] border-[#ffecd1] bg-[#141413]  text-[#ffecd1]">
               {count.length}
             </div>
 
-          </div>
+          </div></NavLink>
           <p className='text-white text-3xl cursor-pointer'
             onClick={styles}
           >
  <NavLink to="search" >🔍 </NavLink>
           </p>
-  
         </div>
       </nav>
 
