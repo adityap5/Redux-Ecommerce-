@@ -3,14 +3,10 @@
 @tailwind utilities;
 
 body {
-  background-color: #efeeee;
+  background-color: #000000;
 }
 
 @font-face {
   font-family:"Korgen" ;
   src: url("/Korgen.ttf")
 }
-
-
-
-
