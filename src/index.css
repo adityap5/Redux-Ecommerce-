@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #efeeee;
+}
+
+@font-face {
+  font-family:"Korgen" ;
+  src: url("/Korgen.ttf")
+}
+
+
+
+
