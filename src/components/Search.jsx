@@ -57,27 +57,26 @@ const Search = () => {
  }
   return (
     <>
-    <div className="absolute bg-black top-[60px] right-[30px]"> 
-    <input className="text-black" type="text" placeholder="search..." value={input} onChange={(e)=>setInput(e.target.value)} /> <br /> <br />
-    <select className="text-black cursor-pointer" value={selectedCategory} onChange={(e)=>setSelectedCategory(e.target.value)}>
+    <div className="absolute top-[60px] right-[30px]"> 
+    <input className="" type="text" placeholder="search..." value={input} onChange={(e)=>setInput(e.target.value)} /> <br /> <br />
+    <select className="text-black cursor-pointer mr-2" value={selectedCategory} onChange={(e)=>setSelectedCategory(e.target.value)}>
         <option value="all">All Categories</option>
         <option value="women's clothing">Womens</option>
         <option value="men's clothing">Mens</option>
         <option value="jewelery">Jewelery</option>
         <option value="electronics">Electronics</option>
 
-        {/* Add more categories as needed */}
       </select>
-    <button className="text-white" onClick={handleSearch} >Search</button>
+    <button className="text-white bg-zinc-500 p-2 rounded-xl" onClick={handleSearch} >Search</button>
     </div>
-    <div className="bg-black">
+    <div className="">
       <div className="grid grid-cols-4 gap-4 m-12 ">
         {filteredData.map((k) => (
-          <div key={k.id} className="bg-[#141413]  max-h-84 max-w-60 rounded-md m-3">
+          <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
             <div className='p-4 place-items-center '>
               <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
               <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
-              {/* <p>{k.description}</p> */}
+         
               <p className="text-sm text-white font-semibold  mt-2 mb-2">Price : ${k.price}</p>
               <button onClick={() => {handle(k)}} className="bg-[#483c32] text-[#ffecd1] rounded-lg p-2 text-sm">Add to cart</button>
             <ToastContainer/>

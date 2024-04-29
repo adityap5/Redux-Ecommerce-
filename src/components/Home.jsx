@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
 
-      <div className="h-screen bg-black text-white">
+      <div className="h-screen  text-white">
         <div ref={container} className="app hero flex justify-between items-center p-14">
           <div className="left w-[56rem]">
             <img
@@ -41,14 +41,14 @@ function Home() {
           <div className="right w-[30rem] grid gap-8">
             <div ref={container} className="app">
               <img
-                className='h-[17rem] w-[30rem] '
+                className='h-[17rem] w-[30rem] rounded-lg'
                 src="rtop.jpg" alt="" />
               <h3 className="box absolute uppercase top-[170px] text-6xl right-[100px]   font-bebas tracking-[1rem] text-white">night lotus</h3>
               <p className="box absolute uppercase top-[240px] text-4xl right-[100px] font-korgen tracking-wider text-[#ffecd1]">PERFUME</p>
             </div>
             <div>
               <img
-                className='h-56 w-48'
+                className='h-64 w-48 '
                 src="watch.png" alt="" />
               <div className='absolute top-[480px] right-[30px] text-white text-4xl uppercase'>
                 <h3 className='box text-6xl font-korgen font-medium'>luxry <br /> </h3>

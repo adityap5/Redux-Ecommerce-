@@ -29,11 +29,11 @@ const handle=(productId)=>{
 }
   return (
     <>
-    <div className="bg-black">
-    <h1 className="bg-yellow-500 text-white text-lg">CART ITEMS</h1>
+    <div className="">
+    <h1 className=" text-white text-3xl">CART ITEMS</h1>
     <div className="grid grid-cols-4 gap-4 m-12 ">
         {cartItems.map((k) => (
-          <div key={k.id} className="bg-gray-700  max-h-84 max-w-60 rounded-md m-3">
+          <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
             <div  className='p-4 place-items-center'>
               <img className="h-44 w-52 gap-x-6 " src={k.image} alt="" />
               <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>

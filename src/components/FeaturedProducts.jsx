@@ -32,11 +32,11 @@ function FeaturedProducts() {
             notify()
           }     
   return (
-    <div className="bg-black">
-      <h1 className="bg-black text-[#FCE2D1] text-5xl font-bebas">#Featured Product</h1>
-        <div className="grid grid-cols-4 gap-4 m-12 bg-black ">
+    <div >
+      <h1 className=" text-[#ffffff] text-5xl font-bebas">#Featured Product</h1>
+        <div className="grid grid-cols-4 gap-4 ml-20">
         {product.map((k) => (
-          <div key={k.id} className="bg-[#141413]  max-h-84 max-w-60 rounded-md m-3">
+          <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
             <div key={k.id} className='p-4 place-items-center '>
               <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
               <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
