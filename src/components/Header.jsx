@@ -12,7 +12,7 @@ function Header() {
   }
   return (
     <>
-      <nav className="bg-[#141413] list-none flex place-content-between items-center py-2 px-14 ">
+      <nav className="bg-[#141413] list-none flex place-content-between items-center m-4 p-2 rounded-xl ">
         <NavLink to="/">
           <h1 className="font-dance text-3xl text-white">Company</h1>
         </NavLink>
@@ -40,7 +40,7 @@ function Header() {
               to="cart" >
           <div className="font-bold  border-2 border-[#ffecd1] w-20 p-2 rounded-lg ">
             Cart
-            <div className="absolute right-[113px] top-1 w-5 h-6 rounded-full border-[1px] border-[#ffecd1] bg-[#141413]  text-[#ffecd1]">
+            <div className="absolute right-[85px] top-1 w-5 h-6 rounded-full border-[1px] border-[#ffecd1] bg-[#141413]  text-[#ffecd1]">
               {count.length}
             </div>
 
