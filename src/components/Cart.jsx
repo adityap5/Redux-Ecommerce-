@@ -43,7 +43,9 @@ const handle=(productId)=>{
               <ToastContainer  />
             </div>
           </div>
-        ))}
+        )
+      )
+}
       </div>
       </div>
     </>

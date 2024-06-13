@@ -10,7 +10,7 @@ function App() {
     <>
     <Header/>
     <Outlet />
-    <div><h3 className='text-white uppercase font-bebas tracking-widest text-2xl mt-4'>free delivery + return over Rs2000 collecct from store</h3></div>
+    <div><h3 className='text-white text-center uppercase font-bebas tracking-widest text-2xl mt-4'>free delivery + return over $200 collecct from store</h3></div>
     <Footer />
     </>
   )

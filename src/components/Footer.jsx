@@ -3,7 +3,7 @@ import './footer.css'
 function Footer() {
   return (
    <>
-   <body >
+   <body className='text-center px-20 py-10'>
 
   <footer className="footer--light">
     <div className="footer-big">

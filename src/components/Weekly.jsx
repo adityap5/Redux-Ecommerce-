@@ -34,17 +34,17 @@ function Weekly() {
       notify()
     }
   return (
-    <div >
-    <h1 className="text-white text-5xl font-bebas">#weekly top selling</h1>
-      <div className="grid grid-cols-4 gap-4 ml-20  ">
+    <div className='text-center p-20'>
+    <h1 className="text-white text-5xl font-bebas mb-14">#weekly top selling</h1>
+      <div className="grid grid-cols-5">
       {week.map((k) => 
-       { if(k.id === 18 || k.id ===7 || k.id ===16 || k.id ===14)
-      return  <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
+       { if(k.id === 18 || k.id ===11 || k.id ===16 || k.id ===14 || k.id ===15)
+      return  <div key={k.id} className="bg-zinc-700  max-h-84 max-w-60 rounded-md">
           <div className='p-4 place-items-center '>
             <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
-            <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
-            <p className="text-sm text-white font-semibold  mt-2 mb-2">Price : ${k.price}</p>
-            <button onClick={() => {handle(k)}} className="bg-[#483c32] text-[#ffecd1] rounded-lg p-2 text-sm">Add to cart</button>
+            <p className="font-sans text-white font-semibold text-sm mt-3">{k.title}</p>
+            <p className="text-sm text-white font-semibold my-3">Price : ${k.price}</p>
+            <button onClick={() => {handle(k)}} className="bg-white border border-[#ffecd1] text-black rounded-lg px-4 py-2 hover:bg-zinc-200">Add to cart</button>
             <ToastContainer />
           </div>
 
