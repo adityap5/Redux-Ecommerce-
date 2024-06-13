@@ -42,7 +42,7 @@ if(status == Statutes.ERROR) {
 }
   return (
     <>
-    <div className="">
+    <div className="text-center">
       <div className="grid grid-cols-4 gap-4 m-12 ">
         {product.map((k) => (
           <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
@@ -51,7 +51,8 @@ if(status == Statutes.ERROR) {
               <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
               {/* <p>{k.description}</p> */}
               <p className="text-sm text-white font-semibold  mt-2 mb-2">Price : ${k.price}</p>
-              <button onClick={() => {handle(k)}} className="bg-[#483c32] text-[#ffecd1] rounded-lg p-2 text-sm">Add to cart</button>
+              <p className='mt-2'>{k.rating.rate}⭐ ({k.rating.count})</p>
+              <button onClick={() => {handle(k)}} className="bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white">Add to cart</button>
               <ToastContainer />
             </div>
           </div>

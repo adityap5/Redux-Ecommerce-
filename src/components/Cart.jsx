@@ -32,18 +32,31 @@ const handle=(productId)=>{
     {cartItems == 0 ? 
     (<div className='py-40'><p className="text-3xl text-zinc-600">Cart empty</p></div>)  :
 
-    (<div className="grid grid-cols-4 gap-4 m-12 ">
+    (<div className="">
         {cartItems.map((k) => (
-          <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
-            <div  className='p-4 place-items-center'>
-              <img className="h-44 w-52 gap-x-6 " src={k.image} alt="" />
-              <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
-              {/* <p>{k.description}</p> */}
-              <p className="text-sm font-semibold text-white mt-2 mb-2">Price : ${k.price}</p>
-              <button onClick={() => handle(k.id)}className="bg-[#141413] text-[#ffecd1] rounded-lg p-2 text-sm">Remove</button>
-              <ToastContainer  />
-            </div>
+          <div className="flex  p-10 ">
+          <div className="overflow-hidden rounded-lg w-[35rem] h-60">
+              <img
+                  src={k.image}
+                  className="h-full w-3/4 object-cover object-center "
+              />
           </div>
+          <div className="justify-center text-start ml-16">
+              <h1 className='text-xl'>{k.title}</h1>
+              <p className=''>{k.category}</p>
+
+              <p className='mt-4'>USD : ${k.price}.00</p>
+              <p className='text-zinc-600 '>incl. of taxes <br />
+                  (Also includes all applicable duties)</p>
+              <p className="text-zinc-300 mt-4">{k.description}</p>
+              <div className='flex justify-between items-center mt-2'>
+              </div>
+              <p className='mt-2'>available stock: </p>
+              <p className='mt-2'>{k.rating.rate}⭐ ({k.rating.count})</p>
+          </div>
+              <button onClick={() => handle(k.id)} className='bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white'>Remove from Cart</button>
+              <ToastContainer  />
+      </div>
         )
       )
 }
