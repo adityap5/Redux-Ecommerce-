@@ -42,7 +42,7 @@ function FeaturedProducts() {
               <p className="font-sans text-white font-semibold text-sm mt-3">{k.title}</p>
              
               <p className="text-sm text-white font-semibold my-3">Price : ${k.price}</p>
-              <button onClick={() => {handle(k)}} className="bg-white border border-[#ffecd1] text-black rounded-lg px-4 py-2 hover:bg-zinc-200  ">Add to cart</button>
+              <button onClick={() => {handle(k)}} className='bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white'>Add to cart</button>
               <ToastContainer />
             </div>
 

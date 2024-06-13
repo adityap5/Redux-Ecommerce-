@@ -54,7 +54,7 @@ const handle=(productId)=>{
               <p className='mt-2'>available stock: </p>
               <p className='mt-2'>{k.rating.rate}⭐ ({k.rating.count})</p>
           </div>
-              <button onClick={() => handle(k.id)} className='bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white'>Remove from Cart</button>
+              <button onClick={() => handle(k.id)} className='min-h-20 min-w-40 bg-white text-black  rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white'>Remove from Cart</button>
               <ToastContainer  />
       </div>
         )
