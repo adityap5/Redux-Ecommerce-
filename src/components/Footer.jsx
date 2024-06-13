@@ -1,139 +1,100 @@
+import { Button, Grid, Typography } from '@mui/material'
 import React from 'react'
-import './footer.css'
+
 function Footer() {
-  return (
-   <>
-   <body className='text-center px-20 py-10'>
+    return (
+        <div className="text-[#ffecd1]" >
+            <Grid className="bg-black text-[#ffecd1] text-center mt-10"
+                container
+                sx={{ bgcolor: "black",py: 3 }}
+            >
+                <Grid item xs={12} sm={6} md={3}>
 
-  <footer className="footer--light">
-    <div className="footer-big">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 col-sm-6">
-            <div className="footer-widget">
-              <div className="widget-about">
-               
-                <ul className="contact-details">
-                  <li>
-                    <i className="fas fa-phone-alt"></i> Call Us:
-                    <a href="#"> +91 9999999999</a>
-                  </li>
-                  <li>
-                    <i className="fas fa-envelope-open-text"></i>
-                    <a href="#">support@ap.com</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="beech">
-          <div className="col-lg-3 col-sm-6">
-            <div className="footer-widget">
-              <div className="footer-menu">
-                <h4 className="footer-widget-title">Popular Category</h4>
-                <ul>
-                  <li>
-                    <a href="#">Men's Fashion</a>
-                  </li>
-                  <li>
-                    <a href="#">Women's Fashion</a>
-                  </li>
-                  <li>
-                    <a href="#">Kids Fashion</a>
-                  </li>
-                  <li>
-                    <a href="#">Street Style</a>
-                  </li>
-                  <li>
-                    <a href="#">Old Money</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+                    <Typography className="pb-5 " variant='h6'>Company</Typography>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>About</Button>
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Blog</Button>
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Jobs</Button>
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Press</Button>
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Patners</Button>
+                    </div>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                    <Typography className="pb-5" variant='h6'>Solution's</Typography>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Marketing</Button>
 
-          <div className="col-lg-3 col-sm-6">
-            <div className="footer-widget">
-              <div className="footer-menu">
-                <h4 className="footer-widget-title">Our Company</h4>
-                <ul>
-                  <li>
-                    <a href="#">About Us</a>
-                  </li>
-                  <li>
-                    <a href="#">How It Works</a>
-                  </li>
-                  <li>
-                    <a href="#">Affiliates</a>
-                  </li>
-                  <li>
-                    <a href="#">Testimonials</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="#">Plan & Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Analytics</Button>
 
-          <div className="col-lg-3 col-sm-6">
-            <div className="footer-widget">
-              <div className="footer-menu p-0">
-                <h4 className="footer-widget-title">Help Support</h4>
-                <ul>
-                  <li>
-                    <a href="#">Support Forum</a>
-                  </li>
-                  <li>
-                    <a href="#">Terms & Conditions</a>
-                  </li>
-                  <li>
-                    <a href="#">Support Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQs</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          </div>
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Commerce</Button>
+
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Insights</Button>
+
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Support</Button>
+
+                    </div>
+
+
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+
+                    <Typography className="pb-5" variant='h6'>Documentations</Typography>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Guide</Button>
+
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>API status</Button>
+
+                    </div>
+                </Grid>
+
+                <Grid item xs={12} sm={6} md={3}>
+
+                    <Typography className="pb-5" variant='h6'>Legal</Typography>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Claim</Button>
+
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Privacy</Button>
+
+                    </div>
+                    <div>
+                        <Button className="pb-5" variant='h6' gutterBottom>Terms</Button>
+
+                    </div>
+                </Grid>
+                <Grid className='pt-20' item xs={12}>
+                   <Typography variant="body2" component="p" align='center'>
+                    &copy; 2024 ShoeCart. All rights reserved.
+                   </Typography>
+                   <Typography variant="body2" component="p" align='center'>
+                   Made with love by ap29
+                   </Typography>
+                   <Typography variant="body2" component="p" align='center'>
+                 <a href="https://www.linkedin.com/in/adityapippal/" target='blanck'>follow</a>
+                   </Typography>
+                </Grid>
+            </Grid>
         </div>
-      </div>
-    </div>
-
-    <div className="mini-footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="copyright-text">
-              <p>© 2024
-                <a href="#"> ap Design</a>. All rights reserved. Created by
-                <a href="#"> ap</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div><br/></div>
-  <div>
-    <span>
-      <a className="extL" href="https://linktr.ee/ap29"><b>ap Design</b></a><span> © </span>All Rights Reserved.</span>
-  </div>
-
-</body>
-   </>
-  )
+    )
 }
 
 export default Footer
-
