@@ -25,7 +25,6 @@ const notify = ()=> toast.success('Added to cart!', {
 const handle=(productId)=>{
   dispatch(remove(productId))
  notify()
-  console.log("nikal")
 }
   return (
     <>
