@@ -28,9 +28,11 @@ const handle=(productId)=>{
 }
   return (
     <>
-    <div className="">
-    <h1 className=" text-white text-3xl">CART ITEMS</h1>
-    <div className="grid grid-cols-4 gap-4 m-12 ">
+    <div className="text-center">
+    {cartItems == 0 ? 
+    (<div className='py-40'><p className="text-3xl text-zinc-600">Cart empty</p></div>)  :
+
+    (<div className="grid grid-cols-4 gap-4 m-12 ">
         {cartItems.map((k) => (
           <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
             <div  className='p-4 place-items-center'>
@@ -45,7 +47,7 @@ const handle=(productId)=>{
         )
       )
 }
-      </div>
+      </div>)}
       </div>
     </>
    
