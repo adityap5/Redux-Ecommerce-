@@ -56,10 +56,10 @@ const Search = () => {
    return <h1 className="font-bold text-4xl text-white font-bebas">Something went wrong....</h1>
  }
   return (
-    <>
+    <div className="text-center">
     <div className="absolute top-[60px] right-[30px]"> 
-    <input className="" type="text" placeholder="search..." value={input} onChange={(e)=>setInput(e.target.value)} /> <br /> <br />
-    <select className="text-black cursor-pointer mr-2" value={selectedCategory} onChange={(e)=>setSelectedCategory(e.target.value)}>
+    <input className="p-3 text-black rounded-xl border-none" type="text" placeholder="search..." value={input} onChange={(e)=>setInput(e.target.value)} /> <br /> <br />
+    <select className="text-black p-3 rounded-lg cursor-pointer mr-2" value={selectedCategory} onChange={(e)=>setSelectedCategory(e.target.value)}>
         <option value="all">All Categories</option>
         <option value="women's clothing">Womens</option>
         <option value="men's clothing">Mens</option>
@@ -72,21 +72,21 @@ const Search = () => {
     <div className="">
       <div className="grid grid-cols-4 gap-4 m-12 ">
         {filteredData.map((k) => (
-          <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
-            <div className='p-4 place-items-center '>
-              <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
-              <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
-         
-              <p className="text-sm text-white font-semibold  mt-2 mb-2">Price : ${k.price}</p>
-              <button onClick={() => {handle(k)}} className="bg-[#483c32] text-[#ffecd1] rounded-lg p-2 text-sm">Add to cart</button>
-            <ToastContainer/>
-            </div>
-
+          <div key={k.id} className="bg-zinc-700  max-h-84 max-w-60 rounded-md ">
+          <div key={k.id} className='p-4 place-items-center '>
+            <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
+            <p className="font-sans text-white font-semibold text-sm mt-3">{k.title}</p>
+           
+            <p className="text-sm text-white font-semibold my-3">Price : ${k.price}</p>
+            <button onClick={() => {handle(k)}} className='bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white'>Add to cart</button>
+            <ToastContainer />
           </div>
+
+        </div>
         ))}
       </div>
       </div>
-    </>
+    </div>
   )
 }
 
