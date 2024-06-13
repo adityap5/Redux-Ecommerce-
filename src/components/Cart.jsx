@@ -4,11 +4,12 @@ import { remove } from '../Slices/cartSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Bounce } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 function Cart() {
  
 const cartItems = useSelector((state)=>state.cart)
 const dispatch = useDispatch()
-
+const navigate = useNavigate()
 const notify = ()=> toast.success('Added to cart!', {
   position: "top-right",
   autoClose: 1000,
@@ -30,18 +31,24 @@ const handle=(productId)=>{
     <>
     <div className="text-center">
     {cartItems == 0 ? 
-    (<div className='py-40'><p className="text-3xl text-zinc-600">Cart empty</p></div>)  :
+    (<div className='py-40'><p className="text-3xl text-zinc-600">Your Cart is empty</p><p
+      onClick={()=>navigate("/shop")}
+        className="box1 mt-4 inline-block cursor-pointer rounded-md border border-transparent bg-white px-8 py-3 text-center font-semibold text-black hover:bg-zinc-400 hover:text-white"
+      >
+        Shop Now
+      </p></div>)  :
 
-    (<div className="">
+    (<div className="space-y-8">
         {cartItems.map((k) => (
-          <div className="flex  p-10 ">
-          <div className="overflow-hidden rounded-lg w-[35rem] h-60">
-              <img
-                  src={k.image}
-                  className="h-full w-3/4 object-cover object-center "
-              />
-          </div>
-          <div className="justify-center text-start ml-16">
+          <div className="flex p-10 ">
+          <div className="overflow-hidden rounded-lg max-w-[15rem] max-h-[15rem]">
+                  <img
+                    src={k.image}
+                    className="h-full w-full object-cover object-top"
+                    alt={k.title}
+                  />
+                </div>
+          <div className="justify-center text-start ml-16 mr-16">
               <h1 className='text-xl'>{k.title}</h1>
               <p className=''>{k.category}</p>
 
