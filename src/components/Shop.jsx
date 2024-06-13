@@ -45,17 +45,17 @@ if(status == Statutes.ERROR) {
     <div className="text-center">
       <div className="grid grid-cols-4 gap-4 m-12 ">
         {product.map((k) => (
-          <div key={k.id} className="bg-zinc-400  max-h-84 max-w-60 rounded-md m-3">
-            <div className='p-4 place-items-center '>
-              <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
-              <p className="font-sans text-white font-semibold text-sm mt-2">{k.title}</p>
-              {/* <p>{k.description}</p> */}
-              <p className="text-sm text-white font-semibold  mt-2 mb-2">Price : ${k.price}</p>
-              <p className='mt-2'>{k.rating.rate}⭐ ({k.rating.count})</p>
-              <button onClick={() => {handle(k)}} className="bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white">Add to cart</button>
-              <ToastContainer />
-            </div>
-          </div>
+           <div key={k.id} className="bg-zinc-700  max-h-84 max-w-60 rounded-md ">
+           <div key={k.id} className='p-4 place-items-center '>
+             <img className="h-44 w-52 gap-x-6 rounded-lg " src={k.image} alt="" />
+             <p className="font-sans text-white font-semibold text-sm mt-3">{k.title}</p>
+            
+             <p className="text-sm text-white font-semibold my-3">Price : ${k.price}</p>
+             <button onClick={() => {handle(k)}} className='bg-white text-black py-4 px-10 rounded-2xl font-bold my-6 hover:bg-zinc-400 hover:text-white'>Add to cart</button>
+             <ToastContainer />
+           </div>
+
+         </div>
         ))}
       </div>
       </div>
