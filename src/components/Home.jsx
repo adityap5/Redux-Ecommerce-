@@ -74,7 +74,7 @@ const navigate = useNavigate()
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                          src="https://images.unsplash.com/photo-1701651172545-eb93a5dde282?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUwfHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8MHx8fDA%3D"
                           alt=""
                           className="box1 h-full w-full object-cover object-center"
                         />
@@ -88,7 +88,7 @@ const navigate = useNavigate()
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          src="https://images.unsplash.com/photo-1636529109797-0749811c4916?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU5fHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8MHx8fDA%3D"
                           alt=""
                           className="box1 h-full w-full object-cover object-center"
                         />
