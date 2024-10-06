@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../Slices/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
@@ -40,11 +40,15 @@ function FeaturedProducts() {
             <h1 className="text-[#ffffff] text-3xl md:text-5xl font-bebas mb-8 md:mb-14">#Featured Product</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
                 {product.map((k) => (
-                    <div key={k.id} className="bg-zinc-700 rounded-md p-4 flex flex-col items-center">
-                        <img className="h-44 w-full object-contain rounded-lg mb-4" src={k.image} alt="" />
-                        <p className="font-sans text-white font-semibold text-sm mb-2">{k.title}</p>
-                        <p className="text-sm text-white font-semibold mb-4">Price: ${k.price}</p>
-                        <button onClick={() => { handle(k) }} className='bg-white text-black py-2 px-4 md:py-4 md:px-10 rounded-2xl font-bold hover:bg-zinc-400 hover:text-white'>Add to cart</button>
+                    <div key={k.id} className="bg-zinc-700 rounded-md p-4 flex flex-col items-center justify-between h-full">
+                        <div className="w-full h-44 mb-4">
+                            <img className="w-full h-full object-contain rounded-lg" src={k.image} alt={k.title} />
+                        </div>
+                        <div className="flex flex-col items-center flex-grow">
+                            <p className="font-sans text-white font-semibold text-sm mb-2 line-clamp-2">{k.title}</p>
+                            <p className="text-sm text-white font-semibold mb-4">Price: ₹{k.price}</p>
+                        </div>
+                        <button onClick={() => { handle(k) }} className='bg-white text-black py-2 px-4 md:py-3 md:px-8 rounded-2xl font-bold hover:bg-zinc-400 hover:text-white w-full'>Add to cart</button>
                     </div>
                 ))}
             </div>

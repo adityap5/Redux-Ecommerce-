@@ -47,7 +47,7 @@ function Shop() {
               <div className="p-4 place-items-center">
                 <img className="h-44 w-full sm:w-52 rounded-lg" src={k.image} alt="" />
                 <p className="font-sans text-white font-semibold text-sm mt-3">{k.title}</p>
-                <p className="text-sm text-white font-semibold my-3">Price: ${k.price}</p>
+                <p className="text-sm text-white font-semibold my-3">Price: ₹{k.price}</p>
                 <button
                   onClick={() => handle(k)}
                   className="bg-white text-black py-2 px-6 sm:py-4 sm:px-10 rounded-2xl font-bold my-4 sm:my-6 hover:bg-zinc-400 hover:text-white"

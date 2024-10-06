@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { remove } from '../Slices/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
